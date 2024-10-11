@@ -229,7 +229,7 @@ export default function Home() {
           <ul className="book-list">
             {booksData.map((book) => (
               <li key={book._id}>
-                <div className="box-card">
+                <div className={styles["box-card"]}>
                   <img
                     src={`http://localhost:8080/${book.image}`}
                     alt={book.title}
