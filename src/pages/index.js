@@ -174,18 +174,18 @@ export default function Home() {
   return (
     <>
       <ToastContainer />
-      <div className="nav-container">
+      <div className={styles["nav-container"]}>
         <div className="banner">
-          <div className="device-container">
+          <div className={styles["device-container"]}>
             {isMobile ? (
-              <p className="mobile-container">
+              <p className={styles["mobile-container"]}>
                 Discover diverse perspectives and ideas through our curated
                 collection of books. We invite you to explore new worlds,
                 challenge your thoughts, and connect with others through the
                 transformative power of books.
               </p>
             ) : (
-              <p className="notebook-container">
+              <p className={styles["notebook-container"]}>
                 Discover diverse perspectives and ideas through our curated
                 collection of books. We invite you to explore new worlds,
                 challenge your thoughts, and connect with others through the
@@ -194,7 +194,7 @@ export default function Home() {
             )}
             {isMobile ? (
               <>
-                <button className="m-special-button">
+                <button className={styles["m-special-button"]}>
                   Special for you{" "}
                   <FontAwesomeIcon
                     icon={faCircleRight}
@@ -202,17 +202,17 @@ export default function Home() {
                     color="green"
                   />
                 </button>
-                <img src="/books.png" alt="books" className="book-icon" />
+                <img src="/books.png" alt="books" className={styles["book-icon"]} />
               </>
             ) : (
-              <button className="special-button">
+              <button className={styles["special-button"]}>
                 Special for you{" "}
                 <FontAwesomeIcon icon={faCircleRight} size="sm" color="green" />
               </button>
             )}
           </div>
           {!isMobile ? (
-            <img src="/books.png" alt="books" className="book-icon" />
+            <img src="/books.png" alt="books" className={styles["book-icon"]} />
           ) : (
             <></>
           )}
@@ -226,14 +226,14 @@ export default function Home() {
         <hr style={{ marginLeft: "20px", marginRight: "20px" }} />
         <div style={{ paddingTop: "50px" }} />
         {showMore ? (
-          <ul className="book-list">
+          <ul className={styles["book-list"]}>
             {booksData.map((book) => (
               <li key={book._id}>
-                <div className={styles["box-card"]}>
+                <div className={styles["box"]}>
                   <img
                     src={`http://localhost:8080/${book.image}`}
                     alt={book.title}
-                    className="card-image"
+                    className={styles["card-image"]}
                   />
                   <div>{book.title}</div>
                   <div>{book.author}</div>
@@ -241,12 +241,12 @@ export default function Home() {
                 </div>
                 <span style={{ display: "flex", gap: "10px", paddingTop: '10px' }}>
                   <Link href={`/details/${book.title}`} className="card-text">
-                    <button className="add-cart">ADD TO CART</button>
+                    <button className={styles["add-cart"]}>ADD TO CART</button>
                   </Link>
                   <img
                     src={isFavorite(book._id) ? "/favorite-fill.png" : "/favorite.png"}
                     alt="Favorite"
-                    className="favorite-icon"
+                    className={styles["favorite-icon"]}
                     onClick={() =>
                       isFavorite(book._id)
                         ? handleRemoveFavorite(book._id)
