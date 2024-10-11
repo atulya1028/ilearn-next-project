@@ -1323,7 +1323,7 @@ body{
     display: flex !important;
     list-style: none !important;
     flex-wrap: wrap !important;
-    gap: 62px !important;
+    gap: 51px !important;
     justify-content: flex-start !important;
     align-items: center !important;
     padding-left: 30px !important;
@@ -1338,7 +1338,7 @@ body{
     display: flex !important;
     list-style: none !important;
     flex-wrap: wrap !important;
-    gap: 100px !important;
+    gap: 60px !important;
     justify-content: flex-start !important;
     align-items: center !important;
     padding-left: 50px !important;
@@ -1353,7 +1353,7 @@ body{
     display: flex !important;
     list-style: none !important;
     flex-wrap: wrap !important;
-    gap: 100px !important;
+    gap: 84px !important;
     justify-content: flex-start !important;
     align-items: center !important;
     padding-left: 50px !important;
